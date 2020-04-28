@@ -27,8 +27,8 @@ class db_manager():
         return response.json()
 
     def save_all_data(self, data):
-        self.__cursor.execute("CREATE DATABASE IF NOT EXISTS COVID_19;")
-        self.__cursor.execute("USE COVID_19;")
+        self.__cursor.execute("CREATE DATABASE IF NOT EXISTS coronavirus;")
+        self.__cursor.execute("USE coronavirus;")
         self.__cursor.execute(
             "CREATE TABLE IF NOT EXISTS CORON (id INT AUTO_INCREMENT PRIMARY KEY, Country VARCHAR(255), CountryCode VARCHAR(255), Slug VARCHAR(255), NewConfirmed INT(10), TotalConfirmed INT(10),NewDeaths INT(10),TotalDeaths INT(10), NewRecovered INT(10),TotalRecovered INT(10), Date VARCHAR(255))")
 
