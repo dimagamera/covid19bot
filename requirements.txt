@@ -33,7 +33,6 @@ requests==2.7.0
 rsa==4.0
 scapy==2.4.3
 selenium==2.53.6
-shodan==1.23.0
 six==1.14.0
 soupsieve==2.0
 telebot==0.0.3
