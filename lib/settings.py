@@ -1,7 +1,7 @@
 ############## TELEGRAM BOT ########################
 token = "1113083009:AAEHdsPlQ38p6DO_pJ2d8zWNpVgSJFx7REI"
 ############## MSQL DATABASES ######################
-host = "localhost"
+host = "13.92.93.63"
 user = "root"
-passwd = ""
+passwd = "my-secret-root"
 database = ""
