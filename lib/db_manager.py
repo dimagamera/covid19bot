@@ -9,11 +9,10 @@ class db_manager():
     __db = ""
     __cursor = ""
 
-    def __init__(self, host, user, passwd, database, url):
+    def __init__(self, host, user, passwd, url):
         self.host = host
         self.user = user
         self.passwd = passwd
-        self.database = database
         self.url = url
         self.__db = mysql.connector.connect(
             host=self.host, user=self.user, passwd=self.passwd)

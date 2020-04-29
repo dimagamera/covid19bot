@@ -4,15 +4,15 @@ import telebot
 
 __URL = "https://api.covid19api.com/summary"
 
-db_object = db_manager(host, user, passwd, database, __URL)
+db_object = db_manager(host, user, passwd, __URL)
 
-covid_19_data = db_object.get_all_data()
-covid_19_save = db_object.save_all_data(covid_19_data)
+# covid_19_data = db_object.get_all_data()
+# covid_19_save = db_object.save_all_data(covid_19_data)
 
 bot = telebot.TeleBot(token)
 
-covid_19_data
-covid_19_save
+# covid_19_data
+# covid_19_save
 
 
 @bot.message_handler(commands=['start'])
