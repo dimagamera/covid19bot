@@ -52,7 +52,7 @@ class db_manager():
             print(self.__cursor.rowcount, "Coron added")
 
     def show_add_data(self):
-        self.__cursor.execute("USE COVID_19;")
+        self.__cursor.execute("USE coronavirus;")
         self.__cursor.execute(
             "SELECT * FROM CORON ORDER BY TotalConfirmed DESC")
         coron = self.__cursor.fetchall()
@@ -71,14 +71,14 @@ class db_manager():
               "\nЗагальна кількість вилікуваних ➤", recov_all)
 
     def show_country(self, countr, countrycode):
-        self.__cursor.execute("USE COVID_19;")
+        self.__cursor.execute("USE coronavirus;")
         self.__cursor.execute(
             "SELECT * FROM CORON WHERE Country = '" + countr + "' OR CountryCode = '"+countrycode+"'")
         coron = self.__cursor.fetchall()
         return coron
 
     def update_stat(self):
-        self.__cursor.execute("USE COVID_19;")
+        self.__cursor.execute("USE coronavirus;")
         sql = ("DELETE FROM CORON")
         self.__cursor.execute(sql)
         self.__db.commit()
