@@ -2,8 +2,6 @@
 //  groovy Jenkinsfile
 properties([disableConcurrentBuilds()])
 
- 
-
 pipeline  {
     agent { 
         label 'master'
@@ -13,7 +11,7 @@ pipeline  {
         timestamps()
     }
     stages {
-    stage("Create docker image") {
+        stage("Create docker image") {
             steps {
                 echo 'Creating docker image ...'
                 dir('.'){
@@ -71,8 +69,6 @@ pipeline  {
         //         '''
         //     }
         //}
-
- 
 
     }
 }
