@@ -11,8 +11,8 @@ covid_19_save = db_object.save_all_data(covid_19_data)
 
 bot = telebot.TeleBot(token)
 
-covid_19_data
-covid_19_save
+# covid_19_data
+# covid_19_save
 
 
 @bot.message_handler(commands=['start'])
