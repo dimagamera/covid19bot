@@ -61,14 +61,14 @@ pipeline  {
 //                '''
 //            }
 //        }
-        stage("docker run") {
-            steps {
-                echo " ============== starting telepy =================="
-                sh '''
-                docker run -d --restart=always --name telepy dimagamera/telegrambot
-                '''
-            }
-        }
+//        stage("docker run") {
+ //           steps {
+ //               echo " ============== starting telepy =================="
+ //               sh '''
+  //              docker run -d --restart=always --name telepy dimagamera/telegrambot
+  //              '''
+ //           }
+ //       }
  //        stage("Deploy to stage server") {
 //           steps {
 //             echo " ============== Running playbook =================="
