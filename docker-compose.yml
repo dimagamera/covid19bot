@@ -1,1 +1,28 @@
+version: '3.3'
+
+services:
+  telebot:
+    image: dimagamera/telegrambot
+    restart: always
+    links:
+      - "db:mysql"
+    environment:
+      DB_HOST: database
+      DB_USER: root2
+      DB_PASSWORD: root2
+      TELEGRAM_TOKEN: 1113083009:AAEHdsPlQ38p6DO_pJ2d8zWNpVgSJFx7REI
+
+  db:
+    image: mysql:5.7
+    restart: always
+    container_name: database
+    expose:
+      - "3306"
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_USER: root2
+      MYSQL_PASSWORD: root2
+      MYSQL_DATABASE: CORON
 
